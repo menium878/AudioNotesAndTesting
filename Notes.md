@@ -27,3 +27,9 @@ Process of placing the value sampled closses to availble bit depth posssition
 Max representable frequentensy 1/2 of your sampled rate
 
 so 44100/2 = 22050 hz it fit our whole range of hearing into itself
+
+## 2
+### Aliasing
+The frequentensy that we are hearing
+
+when we go from 0 to 22050 aka Nyquist we have true value but then it goes down from top to 0 (for 44100)
