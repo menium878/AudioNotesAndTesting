@@ -21,3 +21,9 @@ sampled -> hold (hold that value to next time point now its 1/44100s)
 if i have the values between -1 and 1 i have 2^x of spaces between them where x is a bit depth value
 ### Quantization
 Process of placing the value sampled closses to availble bit depth posssition
+
+### Nyquist theory
+
+Max representable frequentsy 1/2 of your sampled rate
+
+so 44100/2 = 22050 hz it fit our whole range of hearing into itself
