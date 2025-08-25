@@ -24,6 +24,6 @@ Process of placing the value sampled closses to availble bit depth posssition
 
 ### Nyquist theory
 
-Max representable frequentsy 1/2 of your sampled rate
+Max representable frequentensy 1/2 of your sampled rate
 
 so 44100/2 = 22050 hz it fit our whole range of hearing into itself
