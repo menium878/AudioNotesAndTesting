@@ -33,3 +33,9 @@ so 44100/2 = 22050 hz it fit our whole range of hearing into itself
 The frequentensy that we are hearing
 
 when we go from 0 to 22050 aka Nyquist we have true value but then it goes down from top to 0 (for 44100)
+
+## 3
+### sine wave
+Any sound could be broken doing into series of the sine waves of diffrent frequentensy amplitute etc.
+
+
