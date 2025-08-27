@@ -42,3 +42,9 @@ Single pick on fundamental frequentensy
 
 ---- Side Note -----
 squere note multiple harmonices with one pick
+--------------------
+
+Fourier
+Any periodic signal (like a repeating sound wave) can be expressed as the sum of sine and cosine waves of different frequencies, amplitudes, and phases.
+
+In other words, even a very complex sound (like music or speech) can be broken down into a collection of pure tones (simple sine waves).
