@@ -38,4 +38,7 @@ when we go from 0 to 22050 aka Nyquist we have true value but then it goes down 
 ### sine wave
 Any sound could be broken doing into series of the sine waves of diffrent frequentensy amplitute etc.
 
+Single pick on fundamental frequentensy
 
+---- Side Note -----
+squere note multiple harmonices with one pick
