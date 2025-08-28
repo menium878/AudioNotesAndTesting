@@ -57,3 +57,9 @@ taking analog wave mesasuring its amplitude at regular intervals(sample rate) an
 
 PCM all about accuracy - WAV and AIFF files are usally PCM inside a container
 
+#### Compressed Formats
+##### Lossless Compression
+keeps alll the original PCM data but packs it more efficiently
+FLAC ALAC
+When decoded getting bacvk original PCM
+30%-60% spaced saved
