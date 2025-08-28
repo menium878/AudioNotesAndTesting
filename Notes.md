@@ -48,3 +48,12 @@ Fourier
 Any periodic signal (like a repeating sound wave) can be expressed as the sum of sine and cosine waves of different frequencies, amplitudes, and phases.
 
 In other words, even a very complex sound (like music or speech) can be broken down into a collection of pure tones (simple sine waves).
+
+## Side topic
+### PCM vs Compressed Formats
+#### PCM - Pulse-code Modulation
+Raw way of representing digital audio
+taking analog wave mesasuring its amplitude at regular intervals(sample rate) and storinging this numbers
+
+PCM all about accuracy - WAV and AIFF files are usally PCM inside a container
+
