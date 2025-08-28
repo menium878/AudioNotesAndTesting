@@ -63,3 +63,12 @@ keeps alll the original PCM data but packs it more efficiently
 FLAC ALAC
 When decoded getting bacvk original PCM
 30%-60% spaced saved
+##### Lossy compression
+Throws away parts of audio that are considerd less audible to humans
+Uses psychoacoustics - perception of sound e.g quiet sounds masked by loud ones can be discarded
+MP3, ACC, OGG Vorbis, Opus
+decoded back to PCM
+
+#### Why it matters
+working with PCM heavy on disk space & bandwidth no decoding overhead
+working with compressed saves storage but CPU cost to decode to PCM during playback
