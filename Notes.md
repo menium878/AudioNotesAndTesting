@@ -73,4 +73,4 @@ decoded back to PCM
 working with PCM heavy on disk space & bandwidth no decoding overhead
 working with compressed saves storage but CPU cost to decode to PCM during playback
 
-### Video about Fourier Transform, Fourier Series and frquency spectrum
+### [Video about Fourier Transform, Fourier Series and frquency spectrum](https://www.youtube.com/watch?v=r18Gi8lSkfM)
