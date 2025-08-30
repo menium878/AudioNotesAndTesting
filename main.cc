@@ -13,7 +13,7 @@ void writeInt(std::ofstream &stream, uint32_t value, unsigned size) {
 
 int main() {
     const int sampleRate = 44100;   // 44.1kHz
-    const int duration = 2;         // 2 seconds
+    const int duration = 4;         // 2 seconds
     const int numSamples = sampleRate * duration;
     int frequency = 440;      // A4
 
@@ -37,19 +37,35 @@ int main() {
     writeInt(file, numSamples * 2, 4);                 // Subchunk2Size (NumSamples * NumChannels * BitsPerSample/8)
 
     // --- AUDIO DATA ---
-    for (int t = 0; t < numSamples/2; ++t) {
+    for (int t = 0; t < numSamples/4; ++t) {
         double sample = std::sin(2 * M_PI * frequency * t / sampleRate);
         std::cout << frequency<<'\n';
         int16_t intSample = static_cast<int16_t>(sample * 32767);
         writeInt(file, intSample, 2);
     }
 frequency = 560;
-    for (int t = 0; t < numSamples/2; ++t) {
+    for (int t = 0; t < numSamples/4; ++t) {
         double sample = std::sin(2 * M_PI * frequency * t / sampleRate);
         std::cout << frequency<<'\n';
         int16_t intSample = static_cast<int16_t>(sample * 32767);
         writeInt(file, intSample, 2);
     }
+    double phase1 = 0.0, phase2 = 0.0;
+double freq1 = 440, freq2 = 523.25; // A4 + C5
+for (int t = 0; t < numSamples/2; ++t) {
+    double sample1 = sin(phase1);
+    double sample2 = sin(phase2);
+    double combined = (sample1 + sample2) * 0.5; // scale down
+
+    phase1 += 2*M_PI*freq1/sampleRate;
+    phase2 += 2*M_PI*freq2/sampleRate;
+
+    if (phase1 >= 2*M_PI) phase1 -= 2*M_PI;
+    if (phase2 >= 2*M_PI) phase2 -= 2*M_PI;
+
+    int16_t intSample = static_cast<int16_t>(combined * 32767);
+    writeInt(file, intSample, 2);
+}
     file.close();
     std::cout << "Wrote sine_raw.wav\n";
     return 0;
