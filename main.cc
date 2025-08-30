@@ -15,7 +15,7 @@ int main() {
     const int sampleRate = 44100;   // 44.1kHz
     const int duration = 2;         // 2 seconds
     const int numSamples = sampleRate * duration;
-    const int frequency = 440;      // A4
+    int frequency = 440;      // A4
 
     std::ofstream file("sine_raw.wav", std::ios::binary);
 
@@ -37,12 +37,19 @@ int main() {
     writeInt(file, numSamples * 2, 4);                 // Subchunk2Size (NumSamples * NumChannels * BitsPerSample/8)
 
     // --- AUDIO DATA ---
-    for (int t = 0; t < numSamples; ++t) {
+    for (int t = 0; t < numSamples/2; ++t) {
         double sample = std::sin(2 * M_PI * frequency * t / sampleRate);
+        std::cout << frequency<<'\n';
         int16_t intSample = static_cast<int16_t>(sample * 32767);
         writeInt(file, intSample, 2);
     }
-
+frequency = 560;
+    for (int t = 0; t < numSamples/2; ++t) {
+        double sample = std::sin(2 * M_PI * frequency * t / sampleRate);
+        std::cout << frequency<<'\n';
+        int16_t intSample = static_cast<int16_t>(sample * 32767);
+        writeInt(file, intSample, 2);
+    }
     file.close();
     std::cout << "Wrote sine_raw.wav\n";
     return 0;
