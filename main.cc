@@ -38,15 +38,14 @@ int main() {
 
     // --- AUDIO DATA ---
     for (int t = 0; t < numSamples/4; ++t) {
+        if(t > numSamples/8) frequency= 660;
         double sample = std::sin(2 * M_PI * frequency * t / sampleRate);
-        std::cout << frequency<<'\n';
         int16_t intSample = static_cast<int16_t>(sample * 32767);
         writeInt(file, intSample, 2);
     }
 frequency = 560;
     for (int t = 0; t < numSamples/4; ++t) {
         double sample = std::sin(2 * M_PI * frequency * t / sampleRate);
-        std::cout << frequency<<'\n';
         int16_t intSample = static_cast<int16_t>(sample * 32767);
         writeInt(file, intSample, 2);
     }
